@@ -13,9 +13,4 @@ ActiveRecord::Schema.define(:version => 0) do
     t.string            :login
   end
 
-  create_table :authors, :force => true do |t|
-    t.string  :first_name
-    t.string  :last_name
-    t.string  :permalink
-  end
 end
