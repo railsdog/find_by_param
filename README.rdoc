@@ -1,3 +1,6 @@
+This gem is a cutomized version of https://github.com/bumi/find_by_param
+
+
 = find_by_param
 
 _find_by_param_ helps you dealing with permalinks and finding objects by our
@@ -7,8 +10,8 @@ permalink value
       make_permalink :with => :title
     end
 
-now you can do 
-  
+now you can do
+
     Post.find_by_param(...)
 
 If you have a permalink-column _find_by_param_ saves the permalink there and
@@ -41,7 +44,7 @@ uses that otherwise it just uses the provided attribute.
 
 === Client code
 
-    Post.create(:title => "hey ho let's go!").to_param #=> "hey-ho-lets-go" 
+    Post.create(:title => "hey ho let's go!").to_param #=> "hey-ho-lets-go"
               # ... to_param is the method Rails calls to create the URL values
 
     Post.find_by_param("hey-ho-lets-go") #=> <Post>
@@ -63,8 +66,8 @@ with +make_permalink+.
 
 * <tt>:field</tt>
 
-  The name of your permalink column. make_permalink first checks if there is 
-  a column. 
+  The name of your permalink column. make_permalink first checks if there is
+  a column.
 
 * <tt>:prepend_id => [true|false]</tt>
 
@@ -73,7 +76,7 @@ with +make_permalink+.
   search.
 
 * <tt>:param_size => [Number]</tt>
-  
+
   Desired maximum size of the permalink, default is 50.
 
 * <tt>:escape => [true|false]</tt>
