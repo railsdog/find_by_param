@@ -66,7 +66,7 @@ module Railslove
 
           begin
             permalink_value = base_value + ((counter == 0) ? "" : "-#{counter}")
-            query = self.class.send("where", "#{permalink_options[:field]} = ?", permalink_value)
+            query = self.class.where(permalink_options[:field] => permalink_value)
             counter += 1
           end while query.limit(1).present?
 
